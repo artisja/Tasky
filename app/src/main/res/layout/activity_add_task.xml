@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.artisja.tasky.AddTaskActivity">
+
+    <TextView android:id="@+id/add_task_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD TASK"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="40dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:id="@+id/linear_layout_new_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark">
+            <TextView android:id="@+id/new_task_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="Task Title"
+                android:gravity="left"/>
+            <EditText android:id="@+id/new_task_title_edit"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:hint="title"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/linear_layout_new_title"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout android:id="@+id/linear_layout_new_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+            <TextView android:id="@+id/new_task_content_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="Task Details"
+                android:gravity="left"/>
+
+            <EditText android:id="@+id/new_task_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:hint="details"
+                android:gravity="center"/>
+
+            <Button android:id="@+id/image_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick Image"
+                android:gravity="center"
+                android:layout_marginTop="25dp"/>
+
+            <ImageView android:id="@+id/chosen_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </LinearLayout>
+        <Button android:id="@+id/submit_task_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Submit"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="25dp"/>
+    </RelativeLayout>
+</LinearLayout>
